@@ -8,6 +8,7 @@ module.exports = function(router, database) {
     user.password = bcrypt.hashSync(user.password, 12);
     database.addUser(user)
     .then(user => {
+      console.log('user is: ', user)
       if (!user) {
         res.send({error: "error"});
         return;
@@ -29,6 +30,7 @@ module.exports = function(router, database) {
       if (bcrypt.compareSync(password, user.password)) {
         return user;
       }
+
       return null;
     });
   }

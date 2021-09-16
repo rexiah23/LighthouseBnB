@@ -3,7 +3,6 @@ const apiRoutes = require('./apiRoutes');
 const userRoutes = require('./userRoutes');
 
 const path = require('path');
-
 const express = require('express');
 const cookieSession = require('cookie-session');
 const bodyParser = require('body-parser');
